@@ -28,9 +28,16 @@ jobs:
 
     - name: Terraform Init
       run: terraform init
+      env:
+        TF_TOKEN_app_terraform_io: ${{ secrets.TERRAFORM_CLOUD_TOKEN }}  # Use GitHub secret for the token
 
     - name: Terraform Plan
       run: terraform plan
+      env:
+        TF_TOKEN_app_terraform_io: ${{ secrets.TERRAFORM_CLOUD_TOKEN }}  # Use GitHub secret for the token
 
     - name: Terraform Apply
       run: terraform apply -auto-approve
+      env:
+        TF_TOKEN_app_terraform_io: ${{ secrets.TERRAFORM_CLOUD_TOKEN }}  # Use GitHub secret for the token
+
