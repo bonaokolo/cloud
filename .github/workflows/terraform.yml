@@ -36,8 +36,8 @@ jobs:
       env:
         TF_TOKEN_app_terraform_io: ${{ secrets.TERRAFORM_CLOUD_TOKEN }}  # Use GitHub secret for the token
 
-    - name: Terraform Apply
-      run: terraform apply -auto-approve
+    - name: Terraform Destroy
+      run: terraform destroy -auto-approve
       env:
         TF_TOKEN_app_terraform_io: ${{ secrets.TERRAFORM_CLOUD_TOKEN }}  # Use GitHub secret for the token
 
