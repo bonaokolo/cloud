@@ -3,7 +3,7 @@ name: Terraform AWS Provision
 on:
   push:
     branches:
-      - main  # Trigger on push to main branch
+      - terraform-vpc  # Trigger on push to main branch
 
 jobs:
   terraform:
